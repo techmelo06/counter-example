@@ -22,15 +22,13 @@ class index extends Component {
 
     increment = async () => {
         count = count + 1;
-        this.props.setIncrement(count).then((response) => {
-        });
+        this.props.setIncrement(count);
     }
 
     decrement = async () => {
         count == 0 ? null :
             count = count - 1;
-        this.props.setDecrement(count).then((response) => {
-        });
+        this.props.setDecrement(count);
     }
 
     render() {

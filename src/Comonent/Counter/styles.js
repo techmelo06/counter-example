@@ -18,9 +18,10 @@ const styles = StyleSheet.create({
         height: WINDOW_HEIGHT * 0.05,
     },
     counterLabel: {
-        color: "#909497",
         fontSize: 25,
+        color: "#909497",
         fontWeight: '700',
+        paddingVertical: 10,
     },
     labelContainer: {
         color: "#fff",
