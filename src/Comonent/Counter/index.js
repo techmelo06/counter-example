@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setIncrement, setDecrement } from '../../Redux/store/action/counter_action';
 
-let count = 0;
+//let count = 0;
 
 class index extends Component {
     constructor(props) {
@@ -17,15 +17,17 @@ class index extends Component {
     }
 
     componentDidMount = async () => {
-        console.log("Props =", this.props);
     }
 
     increment = async () => {
-        count = count + 1;
+        //console.log("Props =", this.props);
+        let count = this.props.Counter?.count ? this.props.Counter.count + 1 : 0 + 1;
+        //console.log("Props =", this.props);
         this.props.setIncrement(count);
     }
 
     decrement = async () => {
+        let count = this.props.Counter?.count;
         count == 0 ? null :
             count = count - 1;
         this.props.setDecrement(count);
