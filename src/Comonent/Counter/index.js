@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import styles from "./styles";
-
+import Entypo from 'react-native-vector-icons/Entypo';
 //REDUX
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -38,6 +38,11 @@ class index extends Component {
                     onPress={() => this.increment()}
                     style={styles.incrementContainer}
                 >
+                    <Entypo
+                        size={25}
+                        name="plus"
+                        color="#fff"
+                    />
                     <Text style={styles.labelContainer}>INCREMENT</Text>
                 </Pressable>
                 <View>
@@ -47,8 +52,14 @@ class index extends Component {
                     onPress={() => this.decrement()}
                     style={styles.decrementContainer}
                 >
+                    <Entypo
+                        size={25}
+                        name="minus"
+                        color="#fff"
+                    />
                     <Text style={styles.labelContainer}>DECREMENT</Text>
                 </Pressable>
+
             </View>
         )
     }
